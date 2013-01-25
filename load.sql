@@ -1,0 +1,36 @@
+# The Movie Table
+LOAD DATA LOCAL INFILE './data/movie.del' INTO TABLE Movie
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+
+# The Actor Table
+LOAD DATA LOCAL INFILE './data/actor1.del' INTO TABLE Actor 
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+LOAD DATA LOCAL INFILE './data/actor2.del' INTO TABLE Actor 
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+LOAD DATA LOCAL INFILE './data/actor3.del' INTO TABLE Actor 
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+
+# The Director Table
+LOAD DATA LOCAL INFILE './data/director.del' INTO TABLE Director 
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+
+# The MovieGenre Table
+LOAD DATA LOCAL INFILE './data/moviegenre.del' INTO TABLE MovieGenre 
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+
+# The MovieDirector Table
+LOAD DATA LOCAL INFILE './data/moviedirector.del' INTO TABLE MovieDirector
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+
+# The MovieActor Table
+LOAD DATA LOCAL INFILE './data/movieactor1.del' INTO TABLE MovieActor
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+LOAD DATA LOCAL INFILE './data/movieactor2.del' INTO TABLE MovieActor
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"';
+
+# The Review Table
+# No need to load.  User submission later.
+
+# The MaxPersonID and MaxMovie ID Tables
+INSERT INTO MaxPersonID VALUES(69000);
+INSERT INTO MaxMovieID VALUES(4750);
